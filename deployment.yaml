@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1 
+kind: Deployment 
+metadata:
+  name: $Name
+  namespace: $NameSpace 
+  labels:
+    application: $Labels
+spec:
+  replicas: $Replicas
+  selector:
+    matchLabels:
+      application: $Labels
+  template:
+    metadata:
+      labels:
+        application: $
+    spec:
+      containers:
+        - name: $container_name
+          image: $image_name
+          imagePullPolicy: Always
