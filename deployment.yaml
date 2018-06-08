@@ -18,4 +18,6 @@ spec:
       containers:
         - name: $container_name
           image: $image_name
+          ports:
+            - containerPort: $Port
           imagePullPolicy: Always
